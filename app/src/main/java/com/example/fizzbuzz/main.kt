@@ -13,9 +13,15 @@ fun checkFizzBuzz(x: Int) {
     if (x % 3 == 0 && x % 5 == 0) {
         println("FizzBuzz")
     } else if (x % 3 == 0) {
-        println("Fizz")
+        if (x % 7 == 0) {
+            println("FizzBang")
+        } else {println("Fizz")}
     } else if (x % 5 == 0) {
-        println("Buzz")
+        if (x % 7 == 0) {
+            println("FizzBang")
+        } else {println("Buzz")}
+    } else if (x % 7 == 0) {
+        println("Bang")
     } else {
         println(x)
     }
