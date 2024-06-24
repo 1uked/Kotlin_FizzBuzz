@@ -1,7 +1,7 @@
 package com.example.fizzbuzz
 
 fun main(){
-    for (i in 1..100) {
+    for (i in 1..300) {
         checkFizzBuzz(i)
     }
 }
@@ -13,7 +13,8 @@ fun main(){
 * Rule 4 : %5
 * Rule 5 : %7
 * Rule 6 : %11 - Priority
-* Rule
+* Rule 7 : %13
+* Rule 8 : %17 Reverse
 * */
 
 fun checkFizzBuzz(x: Int) {
@@ -42,6 +43,12 @@ fun checkFizzBuzz(x: Int) {
             output = arrayOf("Bong")
         }
     }
+
+    if (x % 17 == 0) {
+        output.reverse()
+    }
+
+
 
     printOutput(x, output)
 }
