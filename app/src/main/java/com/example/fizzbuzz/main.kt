@@ -6,19 +6,19 @@ fun main(){
     val stringInput = readLine()!!
 
     val validRules = arrayOf("3","5","7","11","13","17")
-    var curRules = emptyArray<String>()
+    var currentRules = emptyArray<String>()
 
     for (i in validRules) {
         println("Would you like to use rule '$i': (y/n)")
         var stringAns = readLine()!!
         if (stringAns == "y") {
-            curRules += i
+            currentRules += i
         }
     }
 
     try {
         for (i in 1..stringInput.toInt()) {
-            println(checkFizzBuzz(i,curRules))
+            println(checkFizzBuzz(i,currentRules))
         }
     } catch (e: NumberFormatException) { }
 }
