@@ -23,6 +23,10 @@ fun checkFizzBuzz(x: Int) {
         output += "Fizz"
     }
 
+    if (x % 13 == 0) {
+        output += "Fezz"
+    }
+
     if (x % 5 == 0) {
         output += "Buzz"
     }
@@ -32,7 +36,11 @@ fun checkFizzBuzz(x: Int) {
     }
 
     if (x % 11 == 0) {
-        output = arrayOf("Bong")
+        if (x % 13 == 0) {
+            output = arrayOf("Fezz","Bong")
+        } else {
+            output = arrayOf("Bong")
+        }
     }
 
     printOutput(x, output)
