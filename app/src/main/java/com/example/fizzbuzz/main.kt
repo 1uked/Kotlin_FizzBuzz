@@ -1,27 +1,37 @@
 package com.example.fizzbuzz
 
 fun main(){
-    print("Hello World!")
-
     for (i in 1..100) {
         checkFizzBuzz(i)
     }
-
 }
 
+/*
+* Rule 1 : %3 and %5
+* Rule 2 : %3 || %5 and %7
+* Rule 3 : %3
+* Rule 4 : %5
+* Rule 5 : %7
+* Rule 6 : %11 - Priority
+* Rule
+* */
+
 fun checkFizzBuzz(x: Int) {
-    if (x % 3 == 0 && x % 5 == 0) {
-        println("FizzBuzz")
-    } else if (x % 3 == 0) {
-        if (x % 7 == 0) {
-            println("FizzBang")
-        } else {println("Fizz")}
-    } else if (x % 5 == 0) {
-        if (x % 7 == 0) {
-            println("FizzBang")
-        } else {println("Buzz")}
-    } else if (x % 7 == 0) {
-        println("Bang")
+    var output = emptyArray<String>()
+    if (x % 3 == 0) {
+        output += "Fizz"
+    }
+
+    if (x % 5 == 0) {
+        output += "Buzz"
+    }
+
+    printOutput(x, output)
+}
+
+fun printOutput(x : Int, y : Array<String>){
+    if (y.size != 0) {
+        println(y.joinToString(separator = ""))
     } else {
         println(x)
     }
