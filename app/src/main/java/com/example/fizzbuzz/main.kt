@@ -18,12 +18,17 @@ fun main(){
 
 fun checkFizzBuzz(x: Int) {
     var output = emptyArray<String>()
+
     if (x % 3 == 0) {
         output += "Fizz"
     }
 
     if (x % 5 == 0) {
         output += "Buzz"
+    }
+
+    if (x % 7 == 0) {
+        output += "Bang"
     }
 
     printOutput(x, output)
