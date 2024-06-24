@@ -1,7 +1,5 @@
 package com.example.fizzbuzz
 
-import androidx.core.text.isDigitsOnly
-
 fun main(){
     // TODO: Implement Recursive
     print("Enter an Upper Limit: ")
@@ -17,33 +15,21 @@ fun main(){
 fun checkFizzBuzz(x: Int) {
     var output = emptyArray<String>()
 
-    if (x % 3 == 0) {
-        output += "Fizz"
-    }
+    if (x % 3 == 0) { output += "Fizz" }
 
-    if (x % 13 == 0) {
-        output += "Fezz"
-    }
+    if (x % 13 == 0) { output += "Fezz" }
 
-    if (x % 5 == 0) {
-        output += "Buzz"
-    }
+    if (x % 5 == 0) { output += "Buzz" }
 
-    if (x % 7 == 0) {
-        output += "Bang"
-    }
+    if (x % 7 == 0) { output += "Bang" }
 
     if (x % 11 == 0) {
         if (x % 13 == 0) {
             output = arrayOf("Fezz","Bong")
-        } else {
-            output = arrayOf("Bong")
-        }
+        } else { output = arrayOf("Bong") }
     }
 
-    if (x % 17 == 0) {
-        output.reverse()
-    }
+    if (x % 17 == 0) { output.reverse() }
     printOutput(x, output)
 }
 
