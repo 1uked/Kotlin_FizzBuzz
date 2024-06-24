@@ -1,21 +1,18 @@
 package com.example.fizzbuzz
 
-fun main(){
-    for (i in 1..300) {
-        checkFizzBuzz(i)
-    }
-}
+import androidx.core.text.isDigitsOnly
 
-/*
-* Rule 1 : %3 and %5
-* Rule 2 : %3 || %5 and %7
-* Rule 3 : %3
-* Rule 4 : %5
-* Rule 5 : %7
-* Rule 6 : %11 - Priority
-* Rule 7 : %13
-* Rule 8 : %17 Reverse
-* */
+fun main(){
+    // TODO: Implement Recursive
+    print("Enter an Upper Limit: ")
+    val stringInput = readLine()!!
+
+    try {
+        for (i in 1..stringInput.toInt()) {
+            checkFizzBuzz(i)
+        }
+    } catch (e: NumberFormatException) { }
+}
 
 fun checkFizzBuzz(x: Int) {
     var output = emptyArray<String>()
@@ -47,9 +44,6 @@ fun checkFizzBuzz(x: Int) {
     if (x % 17 == 0) {
         output.reverse()
     }
-
-
-
     printOutput(x, output)
 }
 
