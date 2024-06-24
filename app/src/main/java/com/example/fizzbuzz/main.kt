@@ -31,6 +31,10 @@ fun checkFizzBuzz(x: Int) {
         output += "Bang"
     }
 
+    if (x % 11 == 0) {
+        output = arrayOf("Bong")
+    }
+
     printOutput(x, output)
 }
 
